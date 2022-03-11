@@ -1,0 +1,37 @@
+.button-group{
+    margin: 12px 0 12px 0;
+}
+
+.input-text{
+    height:550px;
+    width: 100%;
+}
+
+
+.block{ 
+    position: relative;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #000;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    z-index: 100;
+}
+
+.line::after {	
+    content: '';
+    width: 0; 
+      height: 0; 
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 10px solid blue;
+    position: absolute;
+    right: 25px;
+    top: -6px;
+}
+
+.row{
+    display:flex;
+}
