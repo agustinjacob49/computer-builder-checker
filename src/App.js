@@ -2,7 +2,7 @@ import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/home/view-hoc';
+import Home from './pages/home/view.js';
 import About from './pages/about/about';
 import { Nav } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
