@@ -22,6 +22,10 @@ const getHomeHOC = View => {
         }
 
         const renderGraph = () => {
+            if (textAreaValue === ''){
+                setErrorMessage('Please, enter some text');
+                return;
+            }
             generateGraph(textAreaValue).then( (adjMatrixResponse) => {
                 renderVertexs(adjMatrixResponse);
                 renderEdges(adjMatrixResponse);
