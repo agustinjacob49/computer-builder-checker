@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button'
 import GraphRender from '../components/graphRender';
 import GraphInput from '../components/graphInput';
+import getHomeHOC from './view-hoc';
 
 const View = (props) => {
 
@@ -35,4 +36,4 @@ const View = (props) => {
     );
 };
 
-export default View;
+export default getHomeHOC(View);
