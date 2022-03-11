@@ -13,7 +13,7 @@ const View = (props) => {
         renderGraph,
         cleanArea,
         onInput,
-        nodes,
+        vertexs,
         edges,
         errorMessage} = props;
 
@@ -24,7 +24,7 @@ const View = (props) => {
                     <GraphInput errorMessage={errorMessage} onInput={onInput} textAreaValue={textAreaValue} />
                 </Col>
                 <Col>
-                    <GraphRender nodes={nodes} edges={edges}/>
+                    <GraphRender nodes={vertexs} edges={edges}/>
                 </Col>
             </Row>
             <div className="button-group">
