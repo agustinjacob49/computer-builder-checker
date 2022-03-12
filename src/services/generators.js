@@ -32,14 +32,14 @@ const generateVertexs = (adjMatrixResponse) => {
 
                 for (const edge of edges){
                     if(alreadyRenderedElements.indexOf(edge)  === -1){
-                        rowElements.push(<div className={`block stepped-${edge}`} style={{top:marginTop,left:`${left}%`}}>{edge}</div>)
+                        rowElements.push(<div data-testid="vertex" className={`block stepped-${edge}`} style={{top:marginTop,left:`${left}%`}}>{edge}</div>)
                         left += 10;
                         alreadyRenderedElements.push(edge);
                     }
                 }
 
                 if (counter === 0){
-                    root = <div className={`block stepped-${keyNode}`} style={{top:marginTop,left:'50%'}}>{keyNode}</div>;
+                    root = <div  data-testid="vertex" className={`block stepped-${keyNode}`} style={{top:marginTop,left:'50%'}}>{keyNode}</div>;
                     elementToRender = <div><div>{root}</div><div className='row'>{rowElements}</div></div>
                 } else {
                     elementToRender = <div className='row'>{rowElements}</div>;
@@ -66,7 +66,7 @@ const generateEdges = (adjMatrixResponse) => {
                     const edges = adjMatrixResponse.get(vertexKey);
             
                     for (const edge of edges)
-                        edgesToRender.push(<LineTo className="line" from={`stepped-${vertexKey}`} to={`stepped-${edge}`} {...style}></LineTo>)
+                        edgesToRender.push(<LineTo className="line" data-testid="edge" from={`stepped-${vertexKey}`} to={`stepped-${edge}`} {...style}></LineTo>)
                 }
 
             resolve(edgesToRender);

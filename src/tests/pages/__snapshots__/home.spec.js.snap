@@ -15,6 +15,7 @@ exports[`Home view Snapshot testing 1`] = `
           >
             <textarea
               class="input-text"
+              data-testid="input-text-area"
               id="floatingTextarea"
             />
           </div>
@@ -31,6 +32,7 @@ exports[`Home view Snapshot testing 1`] = `
     >
       <button
         class="btn btn-primary"
+        data-testid="button-render"
         type="button"
       >
         Render
@@ -38,6 +40,7 @@ exports[`Home view Snapshot testing 1`] = `
        
       <button
         class="btn btn-secondary"
+        data-testid="button-clean"
         type="button"
       >
         Clean

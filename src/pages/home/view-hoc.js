@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import generateGraph from '../../services/dependenciesHandler';
+import generateGraph from '../../services/graphHandler';
 import { generateEdges, generateVertexs } from '../../services/generators';
 
 const getHomeHOC = View => {
