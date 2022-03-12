@@ -61,3 +61,8 @@ Actually, the proyects have tests in the pages,components and in the services.
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
+### To do 
+- Integration tests with puppeter
+- Proptypes
+- Code splitting
+
