@@ -35,7 +35,7 @@ exports[`Home view Snapshot testing 1`] = `
         data-testid="button-render"
         type="button"
       >
-        Render
+        Render Graph
       </button>
        
       <button
@@ -43,7 +43,7 @@ exports[`Home view Snapshot testing 1`] = `
         data-testid="button-clean"
         type="button"
       >
-        Clean
+        Clear text
       </button>
        
     </div>

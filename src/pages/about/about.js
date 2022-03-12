@@ -1,7 +1,9 @@
 const React = require('react');
+const { CONTENT } = require('./../../utils/constants');
 
 const About = () => {
-    return (<p>Hi ! My name is Agustin Jacobsen and I develop this using a custom library to manage graphs and adjacency matrix</p>);
+    const { ABOUT : {BODY} } = CONTENT;
+    return (<p>{BODY}</p>);
 };
 
 export default About;

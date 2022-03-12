@@ -6,7 +6,7 @@ describe('Graph handler', () => {
     test('Reject test - empty text', () => {
 
         return generateGraph().catch(e => {
-            expect(e.message).toBe('Empty text');
+            expect(e.message).toBe('Please, enter some text');
         });
 
     });

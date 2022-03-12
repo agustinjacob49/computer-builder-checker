@@ -1,10 +1,12 @@
 const Graph = require('../classes/graph');
+const { ERROR_MESSAGE } = require('./../utils/constants');
 
 const generateGraph = (text = "") => {
+    const { EMPTY_TEXT } = ERROR_MESSAGE;
     return new Promise((resolve, reject) => {
         try{
             if (text === ''){
-                throw new Error('Empty text');
+                throw new Error(EMPTY_TEXT);
             }
             let textTransform = text.toUpperCase();
             let rows = textTransform.split('\n');

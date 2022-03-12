@@ -6,8 +6,10 @@ import Home from './pages/home/view.js';
 import About from './pages/about/about';
 import { Nav } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
+const { CONTENT } = require('./utils/constants');
 
 function App() {
+  const { HOME: { TITLE } } = CONTENT;
   return (
     <>
       <Nav
@@ -24,7 +26,7 @@ function App() {
       </Nav>
       <div className="wrapper">
         <Container>
-          <h1 className="header-title">Computer builder checker</h1>
+          <h1 className="header-title">{TITLE}</h1>
             <Router>
               <Suspense fallback={<div>Loading...</div>}>
               <Routes>
