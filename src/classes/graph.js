@@ -1,5 +1,5 @@
-const Queue = require('./queue');
-const { ERROR_MESSAGE: { CIRCULAR_REFERENCE }} = require('./../utils/constants');
+import Queue from './queue';
+import { ERROR_MESSAGE } from '../utils/constants'; 
 
 class Graph {
 
@@ -28,6 +28,7 @@ class Graph {
         if (this.bfs(w).indexOf(v)  === -1){
             this.AdjList.get(v).push(w);
         } else {
+            const { CIRCULAR_REFERENCE }  = ERROR_MESSAGE;
             throw new Error(CIRCULAR_REFERENCE);
         }
     }
@@ -73,4 +74,4 @@ class Graph {
 }
 }
 
-module.exports = Graph;
+export default Graph;

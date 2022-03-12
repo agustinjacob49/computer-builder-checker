@@ -1,6 +1,6 @@
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home/view.js';
 import About from './pages/about/about';
@@ -28,12 +28,10 @@ function App() {
         <Container>
           <h1 className="header-title">{TITLE}</h1>
             <Router>
-              <Suspense fallback={<div>Loading...</div>}>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
               </Routes>
-            </Suspense>
           </Router>
         </Container>
       </div>
