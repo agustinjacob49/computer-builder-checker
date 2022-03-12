@@ -5,7 +5,7 @@ import Alert from 'react-bootstrap/Alert';
 const GraphInput = ({errorMessage, onInput, textAreaValue}) => (
     <div>
         <div className="form-floating">
-            <textarea className="input-text" id="floatingTextarea" onInput={onInput}  value={textAreaValue}></textarea>
+            <textarea className="input-text" id="floatingTextarea" onInput={onInput}  value={textAreaValue} data-testid="input-text-area"></textarea>
             { errorMessage && <Alert variant={'danger'}>
                 {errorMessage}
             </Alert>}

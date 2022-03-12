@@ -22,15 +22,15 @@ const View = (props) => {
         <div>
             <Row>
                 <Col>
-                    <GraphInput errorMessage={errorMessage} onInput={onInput} textAreaValue={textAreaValue} />
+                    <GraphInput errorMessage={errorMessage} onInput={onInput} textAreaValue={textAreaValue} aria-label="text-area" />
                 </Col>
                 <Col>
                     <GraphRender nodes={vertexs} edges={edges}/>
                 </Col>
             </Row>
             <div className="button-group">
-                <Button variant="primary" onClick={renderGraph}>Render</Button>{' '}
-                <Button variant="secondary" onClick={cleanArea}>Clean</Button>{' '}
+                <Button variant="primary" onClick={renderGraph} data-testid="button-render">Render</Button>{' '}
+                <Button variant="secondary" onClick={cleanArea} data-testid="button-clean">Clean</Button>{' '}
             </div>
         </div>
     );

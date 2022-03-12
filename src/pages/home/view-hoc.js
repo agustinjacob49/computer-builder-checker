@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import generateGraph from '../../services/dependenciesHandler';
+import generateGraph from '../../services/graphHandler';
 import { generateEdges, generateVertexs } from '../../services/generators';
 
 const getHomeHOC = View => {
@@ -22,6 +22,10 @@ const getHomeHOC = View => {
         }
 
         const renderGraph = () => {
+            if (textAreaValue === ''){
+                setErrorMessage('Please, enter some text');
+                return;
+            }
             generateGraph(textAreaValue).then( (adjMatrixResponse) => {
                 renderVertexs(adjMatrixResponse);
                 renderEdges(adjMatrixResponse);
