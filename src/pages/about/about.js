@@ -1,5 +1,5 @@
-const React = require('react');
-const { CONTENT } = require('./../../utils/constants');
+import React from 'react';
+import { CONTENT } from'./../../utils/constants';
 
 const About = () => {
     const { ABOUT : {BODY} } = CONTENT;

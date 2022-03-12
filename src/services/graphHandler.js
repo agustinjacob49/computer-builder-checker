@@ -1,5 +1,5 @@
-const Graph = require('../classes/graph');
-const { ERROR_MESSAGE } = require('./../utils/constants');
+import Graph from '../classes/graph';
+import { ERROR_MESSAGE } from './../utils/constants';
 
 const generateGraph = (text = "") => {
     const { EMPTY_TEXT } = ERROR_MESSAGE;
