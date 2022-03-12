@@ -1,4 +1,5 @@
 const Queue = require('./queue');
+const { ERROR_MESSAGE: { CIRCULAR_REFERENCE }} = require('./../utils/constants');
 
 class Graph {
 
@@ -27,7 +28,7 @@ class Graph {
         if (this.bfs(w).indexOf(v)  === -1){
             this.AdjList.get(v).push(w);
         } else {
-            throw new Error('Circular reference');
+            throw new Error(CIRCULAR_REFERENCE);
         }
     }
 

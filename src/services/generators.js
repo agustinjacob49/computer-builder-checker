@@ -1,4 +1,8 @@
 import LineTo from 'react-lineto';
+import Vertex from './../components/vertex';
+import RootVertex from './../components/rootVertex';
+import RowVertex from '../components/rowVertex';
+import RowRootVertex from '../components/rowRootVertex';
 
 const style = {
     delay: true,
@@ -32,17 +36,17 @@ const generateVertexs = (adjMatrixResponse) => {
 
                 for (const edge of edges){
                     if(alreadyRenderedElements.indexOf(edge)  === -1){
-                        rowElements.push(<div data-testid="vertex" className={`block stepped-${edge}`} style={{top:marginTop,left:`${left}%`}}>{edge}</div>)
+                        rowElements.push(<Vertex edge={edge} marginTop={marginTop} left={left}/>)
                         left += 10;
                         alreadyRenderedElements.push(edge);
                     }
                 }
 
                 if (counter === 0){
-                    root = <div  data-testid="vertex" className={`block stepped-${keyNode}`} style={{top:marginTop,left:'50%'}}>{keyNode}</div>;
-                    elementToRender = <div><div>{root}</div><div className='row'>{rowElements}</div></div>
+                    root = <RootVertex keyNode={keyNode} marginTop={marginTop} />;
+                    elementToRender= <RowRootVertex root={root} rowElements={rowElements}/>
                 } else {
-                    elementToRender = <div className='row'>{rowElements}</div>;
+                    elementToRender = <RowVertex rowElements={rowElements} />
                 }
                 elementsToRender.push(elementToRender);
                 counter+= 1;

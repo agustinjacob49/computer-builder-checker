@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import generateGraph from '../../services/graphHandler';
 import { generateEdges, generateVertexs } from '../../services/generators';
+const { ERROR_MESSAGE: {EMPTY_TEXT} } = require('../../utils/constants');
 
 const getHomeHOC = View => {
     
@@ -23,7 +24,7 @@ const getHomeHOC = View => {
 
         const renderGraph = () => {
             if (textAreaValue === ''){
-                setErrorMessage('Please, enter some text');
+                setErrorMessage(EMPTY_TEXT);
                 return;
             }
             generateGraph(textAreaValue).then( (adjMatrixResponse) => {
