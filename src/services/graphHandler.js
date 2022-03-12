@@ -3,6 +3,9 @@ const Graph = require('../classes/graph');
 const generateGraph = (text = "") => {
     return new Promise((resolve, reject) => {
         try{
+            if (text === ''){
+                throw new Error('Empty text');
+            }
             let textTransform = text.toUpperCase();
             let rows = textTransform.split('\n');
         
