@@ -6,6 +6,34 @@ Also, I used this libraries :
 * Jest
 * Sass
 
+## How it looks
+
+<img src="https://raw.githubusercontent.com/agustinjacob49/computer-builder-checker/main/readme-files/home.png" width="500" height="400" />
+
+## How to use it
+
+You can make a directed graph with the following sintax
+
+A for node Name
+DEPENDS indicates the Node at the left has an edge directed to de node on the right.
+
+i.e 
+
+A DEPENDS B
+
+renders A -> B 
+
+Attention : You cant have circular refereces or loops \
+
+## Code coverage
+
+<img src="https://raw.githubusercontent.com/agustinjacob49/computer-builder-checker/main/readme-files/coverage.png" width="500" height="400" />
+
+## Deployment
+
+The application its deployed into a Heroku server.
+You can see in [https://computer-builder-checker.herokuapp.com/](https://computer-builder-checker.herokuapp.com/)
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -33,7 +61,3 @@ Actually, the proyects have tests in the pages,components and in the services.
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Deployment
-
-The application its deployed into a Heroku server.
-You can see in [https://computer-builder-checker.herokuapp.com/](https://computer-builder-checker.herokuapp.com/)
